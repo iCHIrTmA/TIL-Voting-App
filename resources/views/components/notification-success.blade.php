@@ -38,6 +38,10 @@
                 Livewire.on('commentWasUpdated', message => {
                     showNotification(message)
                 })
+                
+                Livewire.on('commentWasDeleted', message => {
+                    showNotification(message)
+                })
              @endif"
     x-cloak
     x-show="isOpen"
