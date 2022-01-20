@@ -14,3 +14,6 @@
     <livewire:mark-as-not-spam
         :idea="$idea"/>
 @endadmin
+@auth
+    <livewire:edit-comment/>
+@endauth
