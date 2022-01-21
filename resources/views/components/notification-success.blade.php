@@ -42,6 +42,14 @@
                 Livewire.on('commentWasDeleted', message => {
                     showNotification(message)
                 })
+
+                Livewire.on('commentWasMarkedAsSpam', message => {
+                    showNotification(message)
+                })
+
+                Livewire.on('commentWasMarkedNotSpam', message => {
+                    showNotification(message)
+                })
              @endif"
     x-cloak
     x-show="isOpen"

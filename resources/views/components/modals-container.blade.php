@@ -20,3 +20,9 @@
 @auth
     <livewire:delete-comment/>
 @endauth
+@auth
+    <livewire:mark-comment-as-spam/>
+@endauth
+@admin
+    <livewire:mark-comment-not-spam/>
+@endadmin

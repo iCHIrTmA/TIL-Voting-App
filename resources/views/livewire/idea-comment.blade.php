@@ -7,6 +7,13 @@
         </div>
         <div class="w-full mx-0 md:mx-4">
             <div class="text-gray-600">
+                @admin
+                    @if ($comment->spam_reports > 0)
+                        <div class="text-red mb-2">
+                            Spam Reports: {{ $comment->spam_reports }}
+                        </div>
+                    @endif
+                @endadmin
                 {{ $comment->body }}
             </div>
             <div x-data="{ isOpen: false }"class="flex items-center justify-between mt-6">
@@ -59,7 +66,30 @@
                                         </a>
                                     </li>
                                 @endcan
-                                <li><a href="#" class="hover:bg-gray-100 block transition duration-150 ease-in px-5 py-3">Mark as Spam</a></li>
+                                <li>
+                                    <a
+                                        href="#"
+                                        @click.prevent=
+                                            "isOpen = false
+                                            Livewire.emit('setMarkAsSpamComment', {{ $comment->id }})"
+                                        class="hover:bg-gray-100 block transition duration-150 ease-in px-5 py-3"
+                                    >
+                                        Mark as Spam
+                                    </a>
+                                </li>
+                                @admin
+                                    <li>
+                                        <a
+                                            href="#"
+                                            @click.prevent=
+                                                "isOpen = false
+                                                Livewire.emit('setMarkNotSpamComment', {{ $comment->id }})"
+                                            class="hover:bg-gray-100 block transition duration-150 ease-in px-5 py-3"
+                                        >
+                                            Not Spam
+                                        </a>
+                                    </li>
+                                @endadmin
                             </ul>
                         </div>
                     </div>
