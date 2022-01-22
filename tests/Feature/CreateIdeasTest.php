@@ -65,7 +65,7 @@ class CreateIdeasTest extends TestCase
         $categoryOne = Category::factory()->create(['name' => 'Category One']);
         $categoryTwo = Category::factory()->create(['name' => 'Category Two']);
 
-        $statusOpen = Status::factory()->create(['name' => 'Open', 'classes' => 'bg-gray-200']);
+        $statusOpen = Status::factory()->create(['name' => 'Open']);
 
         Livewire::actingAs($user)
             ->test(CreateIdea::class)
@@ -96,7 +96,7 @@ class CreateIdeasTest extends TestCase
         $categoryOne = Category::factory()->create(['name' => 'Category One']);
         $categoryTwo = Category::factory()->create(['name' => 'Category Two']);
 
-        $statusOpen = Status::factory()->create(['name' => 'Open', 'classes' => 'bg-gray-200']);
+        $statusOpen = Status::factory()->create(['name' => 'Open']);
 
         Livewire::actingAs($user)
             ->test(CreateIdea::class)

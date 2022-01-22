@@ -9,7 +9,7 @@
             @endforeach
         </div> <!-- end comments-container -->
         <div class="my-8">
-            {{ $comments->links() }}
+            {{ $comments->onEachSide(1)->links() }}
         </div>
     @else
         <div class="mx-auto w-70 mt-12">

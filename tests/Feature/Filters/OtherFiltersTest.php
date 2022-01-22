@@ -28,7 +28,7 @@ class OtherFiltersTest extends TestCase
         $categoryOne = Category::factory()->create(['name' => 'Category 1']);
         $categoryTwo = Category::factory()->create(['name' => 'Category 2']);
 
-        $statusOpen = Status::factory()->create(['name' => 'Open', 'classes' => 'bg-gray-200']);
+        $statusOpen = Status::factory()->create(['name' => 'Open']);
 
         $ideaOne = Idea::factory()->create([
             'user_id' => $user->id,
@@ -75,7 +75,7 @@ class OtherFiltersTest extends TestCase
         $categoryOne = Category::factory()->create(['name' => 'Category 1']);
         $categoryTwo = Category::factory()->create(['name' => 'Category 2']);
 
-        $statusOpen = Status::factory()->create(['name' => 'Open', 'classes' => 'bg-gray-200']);
+        $statusOpen = Status::factory()->create(['name' => 'Open']);
 
         $ideaOne = Idea::factory()->create([
             'user_id' => $user->id,
@@ -116,7 +116,7 @@ class OtherFiltersTest extends TestCase
         $categoryOne = Category::factory()->create(['name' => 'Category 1']);
         $categoryTwo = Category::factory()->create(['name' => 'Category 2']);
 
-        $statusOpen = Status::factory()->create(['name' => 'Open', 'classes' => 'bg-gray-200']);
+        $statusOpen = Status::factory()->create(['name' => 'Open']);
 
         $ideaOne = Idea::factory()->create([
             'user_id' => $user->id,
@@ -152,7 +152,7 @@ class OtherFiltersTest extends TestCase
         $categoryOne = Category::factory()->create(['name' => 'Category 1']);
         $categoryTwo = Category::factory()->create(['name' => 'Category 2']);
 
-        $statusOpen = Status::factory()->create(['name' => 'Open', 'classes' => 'bg-gray-200']);
+        $statusOpen = Status::factory()->create(['name' => 'Open']);
 
         $ideaOne = Idea::factory()->create([
             'user_id' => $user->id,
@@ -195,7 +195,7 @@ class OtherFiltersTest extends TestCase
         $categoryOne = Category::factory()->create(['name' => 'Category 1']);
         $categoryTwo = Category::factory()->create(['name' => 'Category 2']);
 
-        $statusOpen = Status::factory()->create(['name' => 'Open', 'classes' => 'bg-gray-200']);
+        $statusOpen = Status::factory()->create(['name' => 'Open']);
 
         $ideaOne = Idea::factory()->create([
             'user_id' => $user->id,
