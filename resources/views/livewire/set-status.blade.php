@@ -56,6 +56,7 @@
 
             <div>
                 <textarea
+                    wire:model="comment"
                     name="update_comment"
                     id="update_comment"
                     cols="30"

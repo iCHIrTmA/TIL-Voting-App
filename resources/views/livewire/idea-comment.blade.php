@@ -27,7 +27,7 @@
                     {{ $comment->body }}
                 </div>
             </div>
-            <div x-data="{ isOpen: false }" class="flex items-center justify-between mt-6">
+            <div x-data="{ isOpen: false }" class="text-gray-900 flex items-center justify-between mt-6">
                 <div class="flex items-center text-xs text-gray-400 font-semibold space-x-2">
                     <div class="@if($comment->is_status_update) text-blue @endif font-semibold text-gray-900">
                         {{ $comment->user->name }}
