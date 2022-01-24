@@ -3,6 +3,7 @@
 namespace App\Http\Livewire;
 
 use App\Models\Idea;
+use App\Notifications\CommentAdded;
 use Livewire\Component;
 use Symfony\Component\HttpFoundation\Response;
 
@@ -25,13 +26,15 @@ class AddComment extends Component
 
         $this->validate();
 
-        $this->idea->comments()->create([
+        $comment = $this->idea->comments()->create([
             'user_id' => auth()->id(),
             'body' => $this->comment,
         ]);
 
-        $this->reset('comment');
+        $this->idea->user->notify(new CommentAdded(($comment)));
 
+        $this->reset('comment');
+        
         $this->emit('commentWasAdded', 'Comment was posted!');
     }
 
