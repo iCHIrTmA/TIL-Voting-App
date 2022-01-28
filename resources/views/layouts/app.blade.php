@@ -69,28 +69,8 @@
                             <p class="text-xs mt-4">Please login to create an idea.</p>
                         @endauth
                     </div>
-                    @auth
-                        <livewire:create-idea/>
-                    @else
-                        <div class="my-6 text-center">
-                            <a
-                               href="{{ route('login') }}"
-                               class="inline-block items-center justify-center w-1/2 h-11 text-xs bg-blue text-white
-                                    font-semibold rounded-xl border border-blue hover:bg-blue-hover transition
-                                    duration-150 ease-in px-6 py-3"
-                            >
-                                Login
-                            </a>
-                            <a 
-                                href="{{ route('register')}}"
-                                class="inline-block items-center justify-center w-1/2 h-11 text-xs bg-gray-200
-                                    font-semibold rounded-xl border border-gray-200 hover:border-gray-400
-                                    transition duration-150 ease-in px-6 py-3 mt-4"
-                            >
-                                Register
-                            </a>
-                        </div>
-                    @endauth
+
+                    <livewire:create-idea/>
                 </div>
             </div>
 

@@ -108,7 +108,7 @@
                                 class="w-20 bg-gray-200 border border-gray-200
                                     font-bold text-xxs uppercase rounded-xl hover:border-gray-400
                                     transition duration-150 ease-in px-4 py-3 -mx-5">
-                                Voted
+                                Vote
                             </button>
                         @endif
 
