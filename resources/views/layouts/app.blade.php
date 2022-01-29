@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>Voting App</title>
+        <title> {{ $title ?? 'Voting App' }}</title>
 
         <!-- Fonts -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap">
@@ -44,11 +44,13 @@
                         @endauth
                     </div>
                 @endif
-                <div>
-                    <a href="#">
-                        <img src="https://www.gravatar.com/avatar/00000000000000000000000000000000?d=mp" alt="avatar" class="w-10 h-10 rounded-full">
-                    </a>
-                </div>
+                @auth
+                    <div>
+                        <a href="#">
+                            <img src="{{ auth()->user()->getAvatar()}}" alt="avatar" class="w-10 h-10 rounded-full">
+                        </a>
+                    </div>
+                @endauth
             </div>
         </div>
 

@@ -18,7 +18,7 @@
                             </div>
                         @endif
                     @endadmin
-                    {{ $idea->description }}
+                    {!! nl2br(e($idea->description)) !!}
                 </div>
 
                 <div class="flex flex-col md:flex-row flex-1 items-center justify-between mt-6">

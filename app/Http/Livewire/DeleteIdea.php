@@ -23,9 +23,6 @@ class DeleteIdea extends Component
             abort(Response::HTTP_FORBIDDEN);
         }
 
-        Vote::where('idea_id', $this->idea->id)->delete();
-        Comment::where('idea_id', $this->idea->id)->delete();
-
         $this->idea->delete();
 
         session()->flash('success_message', 'Idea was deleted.');

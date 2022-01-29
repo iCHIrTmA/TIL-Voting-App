@@ -25,7 +25,7 @@
                     </h4>
                 @endif
                 <div>
-                    {{ $comment->body }}
+                    {!! nl2br(e($comment->body)) !!}
                 </div>
             </div>
             <div x-data="{ isOpen: false }" class="text-gray-900 flex items-center justify-between mt-6">
